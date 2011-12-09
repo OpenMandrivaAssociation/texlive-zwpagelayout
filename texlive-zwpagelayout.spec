@@ -1,4 +1,4 @@
-# revision 23812
+# revision 24645
 # category Package
 # catalog-ctan /macros/latex/contrib/zwpagelayout
 # catalog-date 2011-09-04 18:51:51 +0200
@@ -6,7 +6,7 @@
 # catalog-version 1.2
 Name:		texlive-zwpagelayout
 Version:	1.2
-Release:	1
+Release:	2
 Summary:	Page layout and crop-marks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/zwpagelayout
@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 This package was developed as a typographers' toolbox offering
@@ -29,25 +27,25 @@ vertically. The package facilities work with TeX + dvips or
 (x)dvipdfm(x), and with pdfTeX.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/latex/zwpagelayout/zwpagelayout.sty
-%doc %{_texmfdistdir}/doc/latex/zwpagelayout/License
+%doc %{_texmfdistdir}/doc/latex/zwpagelayout/License.txt
 %doc %{_texmfdistdir}/doc/latex/zwpagelayout/LoremIpsumDolor.tex
 %doc %{_texmfdistdir}/doc/latex/zwpagelayout/README
 %doc %{_texmfdistdir}/doc/latex/zwpagelayout/adjustfoot.pdf

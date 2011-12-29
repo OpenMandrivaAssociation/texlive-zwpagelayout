@@ -26,16 +26,8 @@ both; and it can reflect pages both horizontally and
 vertically. The package facilities work with TeX + dvips or
 (x)dvipdfm(x), and with pdfTeX.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -56,7 +48,6 @@ vertically. The package facilities work with TeX + dvips or
 %doc %{_texmfdistdir}/doc/latex/zwpagelayout/coversample.tex
 %doc %{_texmfdistdir}/doc/latex/zwpagelayout/zwpagelayout.pdf
 %doc %{_texmfdistdir}/doc/latex/zwpagelayout/zwpagelayout.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -67,5 +58,3 @@ vertically. The package facilities work with TeX + dvips or
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

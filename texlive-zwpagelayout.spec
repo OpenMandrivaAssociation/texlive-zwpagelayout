@@ -1,16 +1,16 @@
-# revision 25083
+# revision 26549
 # category Package
-# catalog-ctan /macros/latex/contrib/zwpagelayout
-# catalog-date 2012-01-12 21:28:36 +0100
-# catalog-license lppl
-# catalog-version 1.2a
+# catalog-ctan undef
+# catalog-date undef
+# catalog-license undef
+# catalog-version undef
 Name:		texlive-zwpagelayout
-Version:	1.2a
+Version:	20120809
 Release:	1
-Summary:	Page layout and crop-marks
+Summary:	TeXLive zwpagelayout package
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/zwpagelayout
-License:	LPPL
+URL:		http://tug.org/texlive
+License:	http://www.tug.org/texlive/LICENSE.TL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/zwpagelayout.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/zwpagelayout.doc.tar.xz
 BuildArch:	noarch
@@ -19,12 +19,7 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
 %description
-This package was developed as a typographers' toolbox offering
-important basic features for everyday work. It allows setting
-the paper size and the page layout; it can print crop marks;
-and it can reflect pages both horizontally and vertically. The
-package facilities work with TeX + dvips or (x)dvipdfm(x), and
-with pdfTeX.
+TeXLive zwpagelayout package.
 
 %post
     %{_sbindir}/texlive.post

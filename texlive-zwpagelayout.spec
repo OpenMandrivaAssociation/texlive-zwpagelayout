@@ -53,3 +53,28 @@ TeXLive zwpagelayout package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Aug 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120809-1
++ Revision: 813205
+- Update to latest release.
+
+* Thu Jan 19 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2a-1
++ Revision: 762753
+- Update to latest upstream package
+
+* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-3
++ Revision: 757786
+- Rebuild to reduce used resources
+
+* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.2-2
++ Revision: 739947
+- texlive-zwpagelayout
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.2-1
++ Revision: 719977
+- texlive-zwpagelayout
+- texlive-zwpagelayout
+- texlive-zwpagelayout
+

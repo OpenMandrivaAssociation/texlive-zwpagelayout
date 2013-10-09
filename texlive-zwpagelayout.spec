@@ -1,16 +1,17 @@
-# revision 26549
+# revision 28846
 # category Package
-# catalog-ctan undef
-# catalog-date undef
-# catalog-license undef
-# catalog-version undef
+# catalog-ctan /macros/latex/contrib/zwpagelayout
+# catalog-date 2013-01-15 09:51:57 +0100
+# catalog-license lppl
+# catalog-version 1.4c
 Name:		texlive-zwpagelayout
-Version:	20120809
+Epoch:		1
+Version:	1.4c
 Release:	1
-Summary:	TeXLive zwpagelayout package
+Summary:	Page layout and crop-marks
 Group:		Publishing
-URL:		http://tug.org/texlive
-License:	http://www.tug.org/texlive/LICENSE.TL
+URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/zwpagelayout
+License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/zwpagelayout.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/zwpagelayout.doc.tar.xz
 BuildArch:	noarch
@@ -19,7 +20,12 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
 %description
-TeXLive zwpagelayout package.
+This package was developed as a typographers' toolbox offering
+important basic features for everyday work. It allows setting
+the paper size and the page layout; it can print crop marks;
+and it can reflect pages both horizontally and vertically. The
+package facilities work with TeX + dvips or (x)dvipdfm(x), and
+with pdfTeX.
 
 %post
     %{_sbindir}/texlive.post
@@ -53,28 +59,3 @@ TeXLive zwpagelayout package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Aug 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120809-1
-+ Revision: 813205
-- Update to latest release.
-
-* Thu Jan 19 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2a-1
-+ Revision: 762753
-- Update to latest upstream package
-
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-3
-+ Revision: 757786
-- Rebuild to reduce used resources
-
-* Fri Dec 09 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.2-2
-+ Revision: 739947
-- texlive-zwpagelayout
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.2-1
-+ Revision: 719977
-- texlive-zwpagelayout
-- texlive-zwpagelayout
-- texlive-zwpagelayout
-

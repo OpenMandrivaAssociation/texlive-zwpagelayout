@@ -7,7 +7,7 @@
 Name:		texlive-zwpagelayout
 Epoch:		1
 Version:	1.4c
-Release:	5
+Release:	6
 Summary:	Page layout and crop-marks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/zwpagelayout

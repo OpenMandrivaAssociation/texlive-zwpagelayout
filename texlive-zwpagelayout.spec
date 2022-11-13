@@ -1,19 +1,13 @@
-# revision 28846
-# category Package
-# catalog-ctan /macros/latex/contrib/zwpagelayout
-# catalog-date 2013-01-15 09:51:57 +0100
-# catalog-license lppl
-# catalog-version 1.4c
 Name:		texlive-zwpagelayout
 Epoch:		1
-Version:	1.4d
-Release:	2
+Version:	63074
+Release:	1
 Summary:	Page layout and crop-marks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/zwpagelayout
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/zwpagelayout.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/zwpagelayout.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/zwpagelayout.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/zwpagelayout.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ package facilities work with TeX + dvips or (x)dvipdfm(x), and
 with pdfTeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -52,7 +46,7 @@ with pdfTeX.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 

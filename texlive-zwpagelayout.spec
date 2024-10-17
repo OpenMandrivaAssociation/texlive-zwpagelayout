@@ -4,7 +4,7 @@ Version:	63074
 Release:	2
 Summary:	Page layout and crop-marks
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/zwpagelayout
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/zwpagelayout
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/zwpagelayout.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/zwpagelayout.doc.r%{version}.tar.xz
